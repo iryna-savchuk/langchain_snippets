@@ -20,6 +20,9 @@ venv.bak/
 __pycache__/
 .vector_cache
 
+# Configs
+keys.py
+
 # Misc
 .DS_Store
 Data/
