@@ -26,6 +26,7 @@ keys.py
 # Misc
 .DS_Store
 Data/
+data/
 
 
 # Directory with output figures
