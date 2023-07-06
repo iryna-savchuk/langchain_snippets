@@ -27,8 +27,6 @@ keys.py
 .DS_Store
 Data/
 data/
-
-
-# Directory with output figures
+models/
 output/
 
