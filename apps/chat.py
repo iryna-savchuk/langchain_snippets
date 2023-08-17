@@ -79,9 +79,9 @@ def search_db(user_input, db):
     print(user_input)
     retriever = db.as_retriever()
     retriever.search_kwargs['distance_metric'] = 'cos'
-    retriever.search_kwargs['fetch_k'] = 20
+    retriever.search_kwargs['fetch_k'] = 100
     retriever.search_kwargs['maximal_marginal_relevance'] = True
-    retriever.search_kwargs['k'] = 5
+    retriever.search_kwargs['k'] = 4
     model = ChatOpenAI(model='gpt-3.5-turbo')
     qa = RetrievalQA.from_llm(model, retriever=retriever, return_source_documents=True)
     return qa({'query': user_input})
@@ -101,7 +101,7 @@ def display_conversation(history):
 # Main function to run the app
 def main():
     # Initialize Streamlit app with a title
-    st.write("# Iryna S. 🦹🏼‍♀️")
+    st.write("# Knowledgebase - Iryna S. 🦹🏼‍♀️")
    
     # Load embeddings and the DeepLake database
     db = load_embeddings_and_database(active_loop_data_set_path)
