@@ -1,3 +1,5 @@
+# Voice Assitant Chatbot sample
+
 import os, sys, openai
 import streamlit as st
 from audio_recorder_streamlit import audio_recorder
